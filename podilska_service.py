@@ -31,7 +31,7 @@ def convert_date_to_iso(v_date, v_time):
     full_value = v_date+" "+v_time
     date_obj = datetime.strptime(full_value, "%d.%m.%Y %H:%M")
     time_zone = pytz.timezone('Europe/Kiev')
-    localized_date = time_zone.localize(date_obj)16:45 13.08.2018
+    localized_date = time_zone.localize(date_obj)
     return localized_date.strftime("%Y-%m-%dT%H:%M:%S.%f%z")
 
 def convert_date_time_to_iso(v_date_time):
