@@ -811,7 +811,7 @@ Login
 Внести зміни в актив об'єкта МП
   [Arguments]  ${username}  ${item_id}  ${asset_uaid}  ${fieldname}  ${fieldvalue}
   podilska.Пошук об’єкта МП по ідентифікатору  ${username}  ${asset_uaid}
-  Run KeyWord  podilska.Внести зміни до елементу за шляхом  //div[starts-with(@id, 'pn_w_item') and contains(@class, '${item_id}')]//*[@name= '${fieldname}']  ${fieldname}  ${fieldvalue}
+  Run KeyWord  podilska.Внести зміни до елементу за шляхом  //div[starts-with(@id, 'pn_w_item') and contains(@class, '${item_id}')]//*[@name= 'items[${item_id}].${fieldname}']  ${fieldname}  ${fieldvalue}
   Click Element  id=btnPublic
 
 Додати актив до об'єкта МП
@@ -973,7 +973,7 @@ Login
 Внести зміни в актив лоту
   [Arguments]  ${username}  ${item_id}  ${tender_uaid}  ${fieldname}  ${fieldvalue}
   podilska.Пошук лоту по ідентифікатору  ${username}  ${tender_uaid}
-  Run KeyWord  podilska.Внести зміни до елементу за шляхом  //div[starts-with(@id, 'pn_w_item') and contains(@class, '${item_id}')]//*[@name= '${fieldname}']  ${fieldname}  ${fieldvalue}
+  Run KeyWord  podilska.Внести зміни до елементу за шляхом  //div[starts-with(@id, 'pn_w_item') and contains(@class, '${item_id}')]//*[@name= 'items[${item_id}].${fieldname}']  ${fieldname}  ${fieldvalue}
   Click Element  id=btnPublic
 
 Внести зміни в умови проведення аукціону
