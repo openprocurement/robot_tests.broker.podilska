@@ -668,7 +668,6 @@ Login
 
 Скасувати контракт
   [Arguments]  ${username}  ${tender_uaid}  ${contract_num}
-  ${file_path}  ${file_title}  ${file_content}=  create_fake_doc
   podilska.Пошук тендера по ідентифікатору  ${username}  ${tender_uaid}
   Wait Until Element Is Visible  xpath=(//div[contains(@id, 'pn_control_contract')][1]//span[contains(@class, 'contract_cancelled')])
   Click Element  xpath=(//div[contains(@id, 'pn_control_contract')][1]//span[contains(@class, 'contract_cancelled')])
